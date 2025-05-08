@@ -181,8 +181,7 @@ def withdrawal(credit, withdrawal_value):
     else:
         print("Negado!!")
 
-## lista 02
-
+## lista 03
 
 def list_numbers(n): #exercício 01
     for i in range(0, n):
@@ -244,18 +243,35 @@ def vowel_counter(word): #exercício 14
             counter += 1
     print(counter)
 
-def prime_checker(number): #exercício 15
+def sum_digits(number: int): #exercício 15
+    pass
+
+def prime_checker(number): #exercício 16
     for i in range (2, number-1):
         if i % 2 != 0:
             print("It's prime")
         else:
             print("It's not prime")
             
-def divisors_counter(number):
+def divisors_counter(target_number): #exercício 17
+    divisors_list = []
+    for number in range(1, target_number+1):
+        if target_number % number == 0:
+            divisors_list.append(number)
+    print(divisors_list)
+
+def sum_numbers_loop(): #exercício 18
     counter = 0
-    for number in range(1, number):
-        if number % counter == 0:
-            counter += 1
+    number = 1
+    while number != 0:
+        number = int(input("Digite um número: "))
+        counter += number
     print(counter)
 
-divisors_counter(6)
+def asterisk_pyramid(number: int, inverted: bool = False): #exercício 19-20
+    if inverted == False:
+        for amount in range(1, number+1):
+            print("*"*amount)
+    elif inverted == True:
+        for amount in reversed(range(1, number+1)):
+            print("*"*amount)
