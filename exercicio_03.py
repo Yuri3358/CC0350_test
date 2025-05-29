@@ -1,3 +1,6 @@
 def maximo_personalizado(valores: list[float]) -> float:
-    valores.sort(reverse=True)
-    return valores[0]
+    max_value = 0
+    for value in valores:
+        if max_value < value:
+            max_value = value
+    return max_value
