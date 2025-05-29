@@ -17,7 +17,7 @@ def maximo_personalizado(valores: list[float]) -> float:
 
 def conta_ocorrencias(lista: list[int]) -> dict[int, int]:
     frequency_info = {}
-    for index, number in enumerate(lista):
+    for number in enumerate(lista):
         frequency_info[number] = lista.count(number)
     return frequency_info
 
@@ -27,6 +27,12 @@ def filtra_maiores_que(valores: list[float], limiar: float) -> list[float]:
         if value > limiar:
             filtered_list.append(value)
     return filtered_list
+
+def fatorial(n: int) -> int:
+    acc = 1
+    for number in range(1, n+1):
+        acc *= number
+    return acc
 
 def classifica_notas(notas: list[float]) -> list[str]:
     feedback_grades = []
